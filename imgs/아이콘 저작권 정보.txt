@@ -8,4 +8,7 @@ https://www.flaticon.com/kr/free-icon/ufo_2949108?term=ufo&page=1&position=11&or
 
 GameOver:
 <a href="https://www.flaticon.com/free-icons/game-over" title="game over icons">Game over icons created by Darius Dan - Flaticon</a>
-https://www.flaticon.com/free-icon/game-over_4099871?term=game+over&page=1&position=14&origin=tag&related_id=4099871
+https://www.flaticon.com/free-icon/game-over_4099871?term=game+over&page=1&position=14&origin=tag&related_id=4099871  
+  
+Bullet, backgroundImage:  
+AngryDoggaebi
