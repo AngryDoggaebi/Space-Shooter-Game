@@ -5,7 +5,7 @@ let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d'); //이미지 그리는걸 도와주는 변수
 // canvas.width = 300;
 // canvas.height = 450;
-document.body.appendChild(canvas);
+// document.body.appendChild(canvas);
 
 //이미지 사이즈 (bullet: 25*25, ufo: 35*35, spaceship:40*40)
 
@@ -110,30 +110,33 @@ let keysDown={}
 function setupKeybordListner(){
     //키 누르면 객체에 저장
     document.addEventListener('keydown', function(event){
-        keysDown[event.keyCode] = true;
+        // keysDown[event.keyCode] = true;
+        keysDown[event.key] = true;
     })
     //키에서 손 떼면 객체에서 삭제
     document.addEventListener('keyup', function(event){
-        delete keysDown[event.keyCode]
+        delete keysDown[event.key]
 
-        //스페이스바 총알
-        if(event.keyCode === 32){
+        //스페이스바 총알(KeyCode ==== 32)
+        if(event.key === " "){
             createBullet();
         }
     })
 }
 
 function update(){
-    if(39 in keysDown){
+    // 오른쪽 방향키(KeyCode === 39)
+    if('ArrowRight' in keysDown){
         spaceshipX += 3
-    } // 오른쪽 방향키
-    if(37 in keysDown){
+    }
+    // 왼쪽 방향키(KeyCode === 37)
+    if('ArrowLeft' in keysDown){
         spaceshipX -= 3
-    } // 왼쪽 방향키
+    }
+    //우주선 화면 밖으로 나가지 않게
     if(spaceshipX <= 0){
         spaceshipX = 0;
     }
-    //우주선 화면 밖으로 나가지 않게
     if(spaceshipX >= canvas.width - 35){
         spaceshipX = canvas.width - 35;
     }
