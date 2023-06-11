@@ -51,7 +51,7 @@ function bullet(){
 }
 
 //UFO 좌표
-function randomValue(min, max){
+function randomValue(min, max){ //랜덤값 리턴
     let randomNum = Math.floor(Math.random()*(max-min+1))+min;
     return randomNum;
 }
